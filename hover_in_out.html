@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hover_in_out_style.css">
+    <title>Hover In/Out Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    $('document').ready(function(){
+
+      var tempsrc = "";
+
+      $('img').hover(function(){
+        tempsrc = $(this).attr('src');
+        $(this).attr('src',$(this).attr('alt-src'));
+        $(this).attr('alt-src',tempsrc);
+      },function(){
+        tempsrc = $(this).attr('src');
+        $(this).attr('src',$(this).attr('alt-src'));
+        $(this).attr('alt-src',tempsrc);
+      });
+
+    });
+    
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>jQuery: Hover In/Out Assignment</h1>
+      <div>
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-1.jpg" alt-src="images/ninjarev1.jpg" alt="Ninja Turtle Image 1">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-2.jpg" alt-src="images/ninjarev2.jpg" alt="Ninja Turtle Image 2">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-3.jpg" alt-src="images/ninjarev3.jpg" alt="Ninja Turtle Image 3">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-4.jpg" alt-src="images/ninjarev4.jpg" alt="Ninja Turtle Image 4">
+      </div>
+      <div>
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-5.jpg" alt-src="images/ninjarev5.jpg" alt="Ninja Turtle Image 5">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-6.jpg" alt-src="images/ninjarev6.jpg" alt="Ninja Turtle Image 6">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-7.jpg" alt-src="images/ninjarev7.jpg" alt="Ninja Turtle Image 7">
+        <img src="images/Realistic-Teenage-Mutant-Ninja-Turtles-Portraits-8.jpg" alt-src="images/ninjarev8.jpg" alt="Ninja Turtle Image 8">
+      </div>
+      <button>Restore</button>
+    </div>
+  </body>
+</html>
